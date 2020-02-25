@@ -1,11 +1,11 @@
 const sendbtn = document.getElementById('sendbtn');
 let form = document.getElementById('whole-form');
-let firstname = document.getElementById('inpt-first-name').value;
-let lastname = document.getElementById('inpt-last-name').value;
-let adress = document.getElementById('inpt-adress').value;
+let firstname = document.getElementById('inpt-first-name');
+let lastname = document.getElementById('inpt-last-name');
+let adress = document.getElementById('inpt-adress');
 let mail = document.getElementById('inpt-mail');
 let pass = document.getElementById('inpt-pass');
-let comment = document.getElementById('inpt-comment').value;
+let comment = document.getElementById('inpt-comment');
 const valmail = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
 const valpass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{8,})/;
 
@@ -15,8 +15,7 @@ form.addEventListener("submit", function(e) {
   
 
 
-
-    if (firstname.length ===0 || lastname.length===0 || adress.length===0 || comment.length===0 ){
+    if (firstname.value.length ===0 || lastname.value.length===0 || adress.value.length===0 || comment.value.length===0 ){
         
         alert ('Please fill in all fields.')
         
